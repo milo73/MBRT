@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>MBRT in Balans</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- LOGIN / START SCHERM (F10)                                   -->
+<!-- ============================================================ -->
+<section class="screen active" id="screen-login">
+  <div class="login-shell">
+    <header class="brand-mark">
+      <div class="brand-dot"></div>
+      <div>
+        <h1 class="brand-title">MBRT in Balans</h1>
+        <p class="brand-slogan">Van beeldvorming naar zelfvorming</p>
+      </div>
+    </header>
+
+    <div class="onboarding" id="onboarding">
+      <div class="ob-slide" data-slide="0">
+        <span class="eyebrow">Welkom</span>
+        <h2>Kleine acties, grote winst</h2>
+        <p>MBRT in Balans helpt jou tijdens een drukke werkdag korte beweeg-, herstel- en pauzemomenten in te bouwen. Zonder extra werkdruk.</p>
+      </div>
+      <div class="ob-slide" data-slide="1" hidden>
+        <span class="eyebrow">Wat doet de app</span>
+        <h2>Snel, kort en haalbaar</h2>
+        <p>Start een micro-pauze van 60 seconden, doe een herstelmoment van 2 minuten, of bekijk een lunchidee — alles binnen één tap.</p>
+      </div>
+      <div class="ob-slide" data-slide="2" hidden>
+        <span class="eyebrow">Privacy</span>
+        <h2>Vrijwillig en anoniem</h2>
+        <p>Deelname is vrijwillig. Je teamleider ziet alleen geanonimiseerde groepsdata, nooit jouw individuele scores. Dit prototype gebruikt uitsluitend testdata.</p>
+      </div>
+
+      <div class="ob-dots" aria-hidden="true">
+        <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+    </div>
+
+    <div class="login-actions">
+      <label class="field">
+        <span>Kies een demo-account</span>
+        <select id="login-user"></select>
+      </label>
+      <button class="btn btn-primary btn-block" id="login-submit">Aanmelden</button>
+      <button class="btn btn-ghost btn-block" id="onboarding-next">Volgende</button>
+    </div>
+
+    <footer class="login-foot">
+      <small>Prototype voor pilot — testdata, geen echte gegevens.</small>
+    </footer>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- APP SHELL met sidebar/bottom-nav                             -->
+<!-- ============================================================ -->
+<div class="app" id="app" hidden>
+
+  <aside class="sidebar" id="sidebar" aria-label="Navigatie">
+    <div class="sidebar-brand">
+      <div class="brand-dot small"></div>
+      <div>
+        <strong>MBRT in Balans</strong>
+        <small id="user-name-side">—</small>
+      </div>
+    </div>
+    <nav>
+      <button class="nav-item" data-target="screen-dashboard"><span>🏠</span> Dashboard</button>
+      <button class="nav-item" data-target="screen-micropauze"><span>⏱️</span> Micro-pauze</button>
+      <button class="nav-item" data-target="screen-challenge"><span>👟</span> Beweegchallenge</button>
+      <button class="nav-item" data-target="screen-herstel"><span>🌿</span> Herstelmomenten</button>
+      <button class="nav-item" data-target="screen-voeding"><span>🥗</span> Voeding</button>
+      <button class="nav-item" data-target="screen-nudges"><span>💬</span> Motivatie</button>
+      <button class="nav-item" data-target="screen-team"><span>👥</span> Teamvoortgang</button>
+      <button class="nav-item" data-target="screen-evaluatie"><span>📝</span> Evaluatie</button>
+      <button class="nav-item admin-only" data-target="screen-admin" hidden><span>⚙️</span> Beheer</button>
+    </nav>
+    <footer class="sidebar-foot">
+      <button class="btn btn-ghost btn-block" id="reset-demo">Reset demo-data</button>
+      <button class="btn btn-link btn-block" id="logout">Uitloggen</button>
+    </footer>
+  </aside>
+
+  <main class="main-area">
+
+    <!-- ===================== DASHBOARD (F1) ===================== -->
+    <section class="screen" id="screen-dashboard">
+      <header class="screen-head">
+        <div>
+          <span class="eyebrow">Vandaag</span>
+          <h1 id="welcome-title">Welkom bij MBRT in Balans</h1>
+          <p class="muted" id="welcome-sub">Klaar voor een dag in balans?</p>
+        </div>
+        <div class="week-pill"><span>Week</span><strong id="current-week">3</strong></div>
+      </header>
+
+      <div class="grid-cards">
+
+        <article class="card vitality-card">
+          <h3>Hoe voel je je nu?</h3>
+          <p class="muted small">Drie tikken, klaar.</p>
+          <div class="vital-row">
+            <div class="vital">
+              <label>Energie</label>
+              <div class="scale" data-vital="energy" role="radiogroup" aria-label="Energie 1 tot 5"></div>
+            </div>
+            <div class="vital">
+              <label>Stress</label>
+              <div class="scale" data-vital="stress" role="radiogroup" aria-label="Stress 1 tot 5"></div>
+            </div>
+            <div class="vital">
+              <label>Herstel</label>
+              <div class="scale" data-vital="recovery" role="radiogroup" aria-label="Herstel 1 tot 5"></div>
+            </div>
+          </div>
+          <small class="muted" id="vitality-feedback"></small>
+        </article>
+
+        <article class="card stat-card">
+          <span class="stat-icon">👟</span>
+          <strong id="stat-steps">0</strong>
+          <span>stappen / beweegmomenten</span>
+        </article>
+        <article class="card stat-card">
+          <span class="stat-icon">⏱️</span>
+          <strong id="stat-micro">0</strong>
+          <span>micro-pauzes</span>
+        </article>
+        <article class="card stat-card">
+          <span class="stat-icon">🌿</span>
+          <strong id="stat-herstel">0</strong>
+          <span>herstelmomenten</span>
+        </article>
+
+        <article class="card tip-card">
+          <span class="eyebrow">Tip van de dag</span>
+          <p id="tip-of-day">—</p>
+        </article>
+
+        <article class="card actions-card">
+          <h3>Eén tap, klaar</h3>
+          <div class="action-grid">
+            <button class="btn btn-primary"  data-action="start-micro">▶ Start micro-pauze</button>
+            <button class="btn btn-primary"  data-action="start-herstel-2">🌿 2-min herstelmoment</button>
+            <button class="btn btn-secondary" data-action="log-beweeg">👟 Registreer beweegmoment</button>
+            <button class="btn btn-secondary" data-action="show-lunch">🥗 Lunchidee vandaag</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== MICRO-PAUZE (F2) ===================== -->
+    <section class="screen" id="screen-micropauze" hidden>
+      <header class="screen-head">
+        <div>
+          <span class="eyebrow">Micro-pauze</span>
+          <h1>Kleine pauze, grote winst</h1>
+          <p class="muted">30 seconden tot 3 minuten. Even los van het scherm.</p>
+        </div>
+      </header>
+
+      <div class="card daily-goal">
+        <div>
+          <strong>Dagdoel</strong>
+          <p class="muted small">Neem vandaag <strong>3</strong> micro-pauzes.</p>
+        </div>
+        <div class="ring" id="micro-progress" data-progress="0">
+          <span id="micro-count">0 / 3</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Categorie</h3>
+        <div class="chips" id="micro-categories"></div>
+      </div>
+
+      <div class="grid-cards" id="micro-list"></div>
+
+      <div class="card reminder-card">
+        <h3>Reminders</h3>
+        <p class="muted small">Geen dwingende meldingen. Pauzeren of uitzetten kan altijd.</p>
+        <label class="switch">
+          <input type="checkbox" id="rem-enabled" checked />
+          <span>Reminders aan</span>
+        </label>
+        <label class="field">
+          <span>Interval</span>
+          <select id="rem-interval">
+            <option value="0">Geen</option>
+            <option value="60" selected>Elk uur</option>
+            <option value="90">Elke 90 min</option>
+            <option value="120">Elke 2 uur</option>
+          </select>
+        </label>
+      </div>
+
+      <!-- Timer-overlay -->
+      <div class="overlay" id="timer-overlay" hidden>
+        <div class="overlay-card">
+          <button class="overlay-close" id="timer-close" aria-label="Sluit">✕</button>
+          <span class="eyebrow" id="timer-cat">Bewegen</span>
+          <h2 id="timer-title">Micro-pauze</h2>
+          <p class="muted" id="timer-text">—</p>
+          <div class="timer-display" id="timer-display">00:30</div>
+          <div class="timer-actions">
+            <button class="btn btn-primary" id="timer-toggle">Start</button>
+            <button class="btn btn-ghost"   id="timer-done">Klaar</button>
+          </div>
+          <small class="muted" id="timer-feedback"></small>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CHALLENGE (F3) ===================== -->
+    <section class="screen" id="screen-challenge" hidden>
+      <header class="screen-head">
+        <div>
+          <span class="eyebrow">Teamchallenge</span>
+          <h1>Samen op weg naar 500.000 stappen</h1>
+          <p class="muted">Geen ranglijst, geen prestatiedruk. Elke stap telt.</p>
+        </div>
+      </header>
+
+      <article class="card challenge-progress">
+        <div class="progress-bar"><div class="progress-fill" id="challenge-fill"></div></div>
+        <div class="progress-meta">
+          <strong id="challenge-current">0</strong>
+          <span>van <span id="challenge-goal">500.000</span> stappen</span>
+        </div>
+        <p class="muted small" id="challenge-status"></p>
+      </article>
+
+      <article class="card">
+        <h3>Registreer je beweegmoment</h3>
+        <div class="quick-steps">
+          <button class="btn btn-secondary" data-steps="500">+500 stappen</button>
+          <button class="btn btn-secondary" data-steps="1000">+1.000 stappen</button>
+          <button class="btn btn-secondary" data-steps="2000">+2.000 stappen</button>
+          <button class="btn btn-secondary" data-steps="5000">+5.000 stappen</button>
+        </div>
+        <label class="field">
+          <span>Of vul zelf in</span>
+          <div class="row gap">
+            <input type="number" id="custom-steps" min="0" placeholder="aantal stappen" />
+            <button class="btn btn-primary" id="add-custom-steps">Toevoegen</button>
+          </div>
+        </label>
+      </article>
+
+      <article class="card">
+        <h3>Behaalde badges</h3>
+        <div class="badge-grid" id="badge-grid"></div>
+      </article>
+
+      <article class="card">
+        <h3>Korte motivatie</h3>
+        <p class="muted small">Stuur een hartje of duim — geen wedstrijd, wel een schouderklopje.</p>
+        <div class="cheer-row">
+          <button class="cheer">❤️ 12</button>
+          <button class="cheer">👍 24</button>
+          <button class="cheer">💪 18</button>
+          <button class="cheer">🌟 9</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===================== HERSTEL (F4) ===================== -->
+    <section class="screen" id="screen-herstel" hidden>
+      <header class="screen-head">
+        <div>
+          <span class="eyebrow">Herstelmomenten</span>
+          <h1>1 tot 5 minuten voor jezelf</h1>
+          <p class="muted">Mentale en fysieke reset. Kies wat past bij dit moment.</p>
+        </div>
+      </header>
+      <div class="grid-cards" id="herstel-list"></div>
+      <article class="card reflect-card">
+        <span class="eyebrow">Korte reflectie</span>
+        <h3>Wat heb je nu nodig om verder te kunnen?</h3>
+        <input type="text" id="reflect-input" placeholder="Eén woord is genoeg…" />
+        <button class="btn btn-secondary" id="reflect-save">Opslaan voor jezelf</button>
+        <small class="muted" id="reflect-feedback"></small>
+      </article>
+    </section>
+
+    <!-- ===================== VOEDING (F5) ===================== -->
+    <section class="screen" id="screen-voeding" hidden>
+      <header class="screen-head">
+        <div>
+          <span class="eyebrow">Voeding</span>
+          <h1>Gezonde keuzes, haalbaar in je werkdag</h1>
+          <p class="muted">Inspiratie, geen voorschriften.</p>
+        </div>
+      </header>
+
+      <article class="card highlight-card" id="meal-of-day">
+        <span class="eyebrow">Maaltijd van de dag</span>
+        <h2 id="mod-title">—</h2>
+        <p class="muted" id="mod-ings">—</p>
+        <div class="row gap">
+          <button class="btn btn-primary"   id="mod-fav">★ Favoriet</button>
+          <button class="btn btn-secondary" id="mod-mark">Ik heb bewust gezond gekozen</button>
+        </div>
+        <small class="muted" id="mod-feedback"></small>
+      </article>
+
+      <article class="card">
+        <h3>Filters</h3>
+        <div class="chips" id="meal-filters"></div>
+      </article>
+
+      <div class="grid-cards" id="meal-list"></div>
+
+      <article class="card quiz-card">
+        <span class="eyebrow">Snelle quiz</span>
+        <h3>Welke combinatie geeft de langste energie?</h3>
+        <div class="quiz-options" id="quiz-options"></div>
+        <small class="muted" id="quiz-feedback"></small>
+      </article>
+    </section>
+
+    <!-- ===================== NUDGES (F6) ===================== -->
+    <section class="screen" id="screen-nudges" hidden>
+      <header class="screen-head">
+        <div>
+          <span class="eyebrow">Motivatie</span>
+          <h1>Korte duwtjes, jouw tempo</h1>
+          <p class="muted">Maximaal 3 per dag. Snooze altijd mogelijk.</p>
+        </div>
+      </header>
+      <div class="grid-cards" id="nudges-list"></div>
+      <article class="card">
+        <h3>Voorkeuren</h3>
+        <label class="switch">
+          <input type="checkbox" id="nudges-enabled" checked /> <span>Nudges aan</span>
+        </label>
+        <label class="field">
+          <span>Tijdvenster</span>
+          <select id="nudges-window">
+            <option value="work" selected>Werkdag (09:00–17:00)</option>
+            <option value="morning">Alleen ochtend</option>
+            <option value="afternoon">Alleen middag</option>
+          </select>
+        </label>
+        <div class="row gap">
+          <button class="btn btn-ghost" data-snooze="60">Snooze 1 uur</button>
+          <button class="btn btn-ghost" data-snooze="1440">Snooze vandaag</button>
+          <button class="btn btn-ghost" data-snooze="10080">Snooze week</button>
+        </div>
+        <small class="muted" id="snooze-feedback"></small>
+      </article>
+    </section>
+
+    <!-- ===================== TEAMVOORTGANG (F7) ===================== -->
+    <section class="screen" id="screen-team" hidden>
+      <header class="screen-head">
+        <div>
+          <span class="eyebrow">Team</span>
+          <h1>Hoe doet MBRT het samen?</h1>
+          <p class="muted">Alleen geanonimiseerde groepsdata. Individuele scores zijn nooit zichtbaar.</p>
+        </div>
+      </header>
+
+      <div class="grid-cards">
+        <article class="card stat-card"><span class="stat-icon">👥</span><strong id="team-active">0</strong><span>actieve deelnemers</span></article>
+        <article class="card stat-card"><span class="stat-icon">📊</span><strong id="team-rate">0%</strong><span>deelnamepercentage</span></article>
+        <article class="card stat-card"><span class="stat-icon">⏱️</span><strong id="team-micro">0</strong><span>micro-pauzes</span></article>
+        <article class="card stat-card"><span class="stat-icon">🌿</span><strong id="team-herstel">0</strong><span>herstelmomenten</span></article>
+        <article class="card stat-card"><span class="stat-icon">👟</span><strong id="team-beweeg">0</strong><span>beweegmomenten</span></article>
+        <article class="card stat-card"><span class="stat-icon">🥗</span><strong id="team-voeding">0</strong><span>gezonde keuzes</span></article>
+      </div>
+
+      <article class="card">
+        <h3>Trend per week — gemiddelden op groepsniveau</h3>
+        <div class="trend-chart" id="trend-chart"></div>
+        <small class="muted">Schaal 1–5. Alleen weergegeven bij ≥ 5 deelnemers per week.</small>
+      </article>
+
+      <div class="grid-cards">
+        <article class="card">
+          <h3>Meest gekozen micro-pauzes</h3>
+          <ol class="topo-list" id="top-micro"></ol>
+        </article>
+        <article class="card">
+          <h3>Meest bekeken maaltijden</h3>
+          <ol class="topo-list" id="top-meals"></ol>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== EVALUATIE (F8) ===================== -->
+    <section class="screen" id="screen-evaluatie" hidden>
+      <header class="screen-head">
+        <div>
+          <span class="eyebrow">Evaluatie</span>
+          <h1>Vertel hoe het ging</h1>
+          <p class="muted">Vijf weken later. Anoniem, kost ongeveer 2 minuten.</p>
+        </div>
+      </header>
+      <form class="card" id="evaluatie-form">
+        <div id="evaluatie-questions"></div>
+        <button class="btn btn-primary btn-block" type="submit">Versturen</button>
+        <small class="muted" id="evaluatie-feedback"></small>
+      </form>
+    </section>
+
+    <!-- ===================== BEHEER (F9) ===================== -->
+    <section class="screen" id="screen-admin" hidden>
+      <header class="screen-head">
+        <div>
+          <span class="eyebrow">Beheer · alleen projectgroep</span>
+          <h1>Beheerdersdashboard</h1>
+          <p class="muted">Beheer content, challenges en plan nudges.</p>
+        </div>
+      </header>
+
+      <div class="grid-cards">
+        <article class="card">
+          <h3>Challenge-instellingen</h3>
+          <label class="field"><span>Teamdoel (stappen)</span><input type="number" id="admin-goal" /></label>
+          <label class="field"><span>Looptijd (weken)</span><input type="number" id="admin-weeks" value="5" /></label>
+          <button class="btn btn-primary" id="admin-save-challenge">Opslaan</button>
+        </article>
+
+        <article class="card">
+          <h3>Plan een nudge</h3>
+          <label class="field"><span>Bericht</span><input type="text" id="admin-nudge-text" placeholder="bv. Tijd voor 60 sec reset?" /></label>
+          <label class="field"><span>Tijdvenster</span><select id="admin-nudge-window"><option>Werkdag</option><option>Ochtend</option><option>Middag</option></select></label>
+          <button class="btn btn-primary" id="admin-add-nudge">Toevoegen aan rooster</button>
+        </article>
+
+        <article class="card">
+          <h3>Micro-pauzes (catalogus)</h3>
+          <ul class="admin-list" id="admin-micro"></ul>
+        </article>
+
+        <article class="card">
+          <h3>Maaltijden (catalogus)</h3>
+          <ul class="admin-list" id="admin-meals"></ul>
+        </article>
+
+        <article class="card">
+          <h3>Evaluatieresultaten</h3>
+          <p class="muted small">Exporteer geanonimiseerde antwoorden als CSV.</p>
+          <button class="btn btn-secondary" id="admin-export">Exporteer CSV</button>
+          <small class="muted" id="admin-export-feedback"></small>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Mobiele bottom-nav -->
+  <nav class="bottom-nav" id="bottom-nav" aria-label="Mobiele navigatie">
+    <button class="nav-item" data-target="screen-dashboard"><span>🏠</span><small>Home</small></button>
+    <button class="nav-item" data-target="screen-micropauze"><span>⏱️</span><small>Pauze</small></button>
+    <button class="nav-item" data-target="screen-challenge"><span>👟</span><small>Challenge</small></button>
+    <button class="nav-item" data-target="screen-voeding"><span>🥗</span><small>Voeding</small></button>
+    <button class="nav-item" data-target="screen-team"><span>👥</span><small>Team</small></button>
+  </nav>
+
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast" hidden></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
