@@ -4,7 +4,28 @@ Webapp-prototype voor de vitaliteitscampagne **MBRT in Balans** (campagne *Van b
 
 Zie [`PRD.md`](./PRD.md) voor de volledige product requirements.
 
-## Hoe te gebruiken
+## Live demo deployen (Vercel)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/milo73/MBRT)
+
+**Aanbevolen route (geen CLI, geen config):**
+1. Ga naar [vercel.com/new](https://vercel.com/new) en log in met je GitHub-account.
+2. Kies *Import Git Repository* → selecteer `milo73/MBRT`.
+3. Laat alle instellingen op de standaardwaarden (Framework Preset = *Other*, Build Command leeg, Output Directory = `./`).
+4. Klik **Deploy** — binnen ~30 seconden krijg je een live URL als `mbrt-xxx.vercel.app`.
+
+Vercel detecteert automatisch dat het een statische site is (`index.html` in de root). Geen build-step nodig.
+
+**Alternatief — Vercel CLI:**
+```bash
+npm i -g vercel
+vercel             # eerste keer: log in via browser
+vercel --prod      # productie-deploy
+```
+
+Elke push naar `main` (of een PR) krijgt automatisch een nieuwe preview-URL zodra het project gekoppeld is.
+
+## Lokaal openen
 
 Open `index.html` direct in een moderne browser (Chrome, Edge, Firefox, Safari) — desktop of mobiel.
 Geen build, geen server, geen netwerkafhankelijkheid (behalve het laden van het Inter-font).
