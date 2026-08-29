@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap">
+  <style>
+    body { margin: 0; background: #F5F6F4; font-family: "Lato", Helvetica, Arial, sans-serif; color: #1A1A1A; }
+    a { color: #B40066; text-decoration: none; }
+    a:hover { color: #E3027F; }
+  </style>
+</helmet>
+
+<div style="width: 390px; min-height: 844px; display: flex; flex-direction: column; background: #F5F6F4;">
+
+  <!-- App-bar -->
+  <div style="height: 56px; flex-shrink: 0; background: #FFFFFF; border-bottom: 1px solid #E1E1E1; display: flex; align-items: center; gap: 12px; padding: 0 16px;">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6 8.5 12l6 6"/></svg>
+    <strong style="font-size: 16px; font-weight: 900;">Micro-pauze</strong>
+    <div style="margin-left: auto; display: flex; align-items: center; gap: 6px; background: #FCE6F2; color: #B40066; padding: 6px 10px; font-size: 12px; font-weight: 900;">3 / 3</div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 16px; padding: 20px 16px 16px 16px; flex-grow: 1;">
+
+    <!-- Kop -->
+    <div style="display: flex; flex-direction: column; gap: 4px;">
+      <span style="font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em; color: #E3027F;">Dagdoel gehaald</span>
+      <h1 style="margin: 0; font-size: 26px; font-weight: 900; line-height: 1.15; letter-spacing: -0.02em;">Kleine pauze,<br>grote winst</h1>
+      <p style="margin: 0; font-size: 15px; color: #5A5A5A;">30 seconden tot 3 minuten. Even los van het scherm.</p>
+    </div>
+
+    <!-- Voortgang -->
+    <div style="background: #FFFFFF; border: 1px solid #E1E1E1; padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between;">
+        <span style="font-size: 14px; font-weight: 700;">Vandaag</span>
+        <span style="font-size: 13px; color: #14795A; font-weight: 700;">Zitpatroon 3× doorbroken</span>
+      </div>
+      <div style="display: flex; gap: 6px;">
+        <div style="flex-grow: 1; height: 8px; background: #2EA86A;"></div>
+        <div style="flex-grow: 1; height: 8px; background: #2EA86A;"></div>
+        <div style="flex-grow: 1; height: 8px; background: #2EA86A;"></div>
+        <div style="flex-grow: 1; height: 8px; background: #EDEEEB;"></div>
+        <div style="flex-grow: 1; height: 8px; background: #EDEEEB;"></div>
+      </div>
+    </div>
+
+    <!-- Categorieën -->
+    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+      <div style="height: 44px; padding: 0 16px; background: #1A1A1A; color: #FFFFFF; display: flex; align-items: center; font-size: 14px; font-weight: 900;">Alle</div>
+      <div style="height: 44px; padding: 0 16px; background: #FFFFFF; border: 1px solid #E1E1E1; display: flex; align-items: center; font-size: 14px; font-weight: 700;">Bewegen</div>
+      <div style="height: 44px; padding: 0 16px; background: #FFFFFF; border: 1px solid #E1E1E1; display: flex; align-items: center; font-size: 14px; font-weight: 700;">Ogen</div>
+      <div style="height: 44px; padding: 0 16px; background: #FFFFFF; border: 1px solid #E1E1E1; display: flex; align-items: center; font-size: 14px; font-weight: 700;">Ademhaling</div>
+      <div style="height: 44px; padding: 0 16px; background: #FFFFFF; border: 1px solid #E1E1E1; display: flex; align-items: center; font-size: 14px; font-weight: 700;">Houding</div>
+    </div>
+
+    <!-- Lijst -->
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+
+      <div style="background: #FFFFFF; border: 1px solid #E1E1E1; padding: 14px; display: flex; align-items: center; gap: 14px;">
+        <div style="width: 44px; height: 44px; flex-shrink: 0; background: #FCE6F2; color: #B40066; display: flex; align-items: center; justify-content: center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12s3.8-6 9.5-6 9.5 6 9.5 6-3.8 6-9.5 6-9.5-6-9.5-6z"/><circle cx="12" cy="12" r="2.5"/></svg>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1;">
+          <strong style="font-size: 15px; font-weight: 900;">20-20-20 oogrust</strong>
+          <span style="font-size: 13px; color: #5A5A5A;">Kijk 20 sec naar iets op 6 meter.</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 12px; font-weight: 900; color: #B40066; background: #FCE6F2; padding: 4px 8px;">1 min</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B0B0B0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 6 15.5 12l-6 6"/></svg>
+        </div>
+      </div>
+
+      <div style="background: #FFFFFF; border: 1px solid #E1E1E1; padding: 14px; display: flex; align-items: center; gap: 14px;">
+        <div style="width: 44px; height: 44px; flex-shrink: 0; background: #FCE6F2; color: #B40066; display: flex; align-items: center; justify-content: center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h11a3 3 0 1 0-3-3"/><path d="M3 14h14a3 3 0 1 1-3 3"/></svg>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1;">
+          <strong style="font-size: 15px; font-weight: 900;">Rustig ademhalen</strong>
+          <span style="font-size: 13px; color: #5A5A5A;">4 sec in, 6 sec uit. Zes keer.</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 12px; font-weight: 900; color: #B40066; background: #FCE6F2; padding: 4px 8px;">1 min</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B0B0B0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 6 15.5 12l-6 6"/></svg>
+        </div>
+      </div>
+
+      <div style="background: #F3FAF6; border: 1px solid #BCE3CE; padding: 14px; display: flex; align-items: center; gap: 14px;">
+        <div style="width: 44px; height: 44px; flex-shrink: 0; background: #2EA86A; color: #FFFFFF; display: flex; align-items: center; justify-content: center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 7.5"/></svg>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1;">
+          <strong style="font-size: 15px; font-weight: 900;">Traplopen</strong>
+          <span style="font-size: 13px; color: #14795A; font-weight: 700;">Gedaan om 11:20</span>
+        </div>
+        <span style="font-size: 12px; font-weight: 900; color: #14795A;">2 min</span>
+      </div>
+
+      <div style="background: #FFFFFF; border: 1px solid #E1E1E1; padding: 14px; display: flex; align-items: center; gap: 14px;">
+        <div style="width: 44px; height: 44px; flex-shrink: 0; background: #FCE6F2; color: #B40066; display: flex; align-items: center; justify-content: center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h4v-4h4v-4h4V7h4"/></svg>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1;">
+          <strong style="font-size: 15px; font-weight: 900;">Bureau-reset</strong>
+          <span style="font-size: 13px; color: #5A5A5A;">Houding, scherm en stoel checken.</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 12px; font-weight: 900; color: #B40066; background: #FCE6F2; padding: 4px 8px;">3 min</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B0B0B0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 6 15.5 12l-6 6"/></svg>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 8px;">
+      <div style="height: 56px; background: #E3027F; color: #FFFFFF; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 16px; font-weight: 900;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 6.5 17 12l-8 5.5z"/></svg>
+        Start 60 seconden
+      </div>
+      <span style="font-size: 12px; color: #5A5A5A; text-align: center;">Reminders staan aan · elk uur · pauzeren kan altijd</span>
+    </div>
+
+  </div>
+
+  <!-- Bottom nav -->
+  <div style="height: 68px; flex-shrink: 0; background: #FFFFFF; border-top: 1px solid #E1E1E1; display: flex; align-items: stretch;">
+    <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; color: #5A5A5A;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/></svg>
+      <span style="font-size: 11px; font-weight: 700;">Home</span>
+    </div>
+    <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; color: #E3027F; border-top: 3px solid #E3027F; margin-top: -1px;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+      <span style="font-size: 11px; font-weight: 900;">Pauze</span>
+    </div>
+    <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; color: #5A5A5A;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2.5-7 4 14 2.5-7h5"/></svg>
+      <span style="font-size: 11px; font-weight: 700;">Challenge</span>
+    </div>
+    <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; color: #5A5A5A;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12h17a8.5 8.5 0 0 1-17 0z"/><path d="M12 9c0-2 1.2-3.5 3-3.5"/><path d="M5 19h14"/></svg>
+      <span style="font-size: 11px; font-weight: 700;">Voeding</span>
+    </div>
+    <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; color: #5A5A5A;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3.2"/><path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6S13.9 16 14.5 19"/><path d="M16 6.2a3.2 3.2 0 0 1 0 5.9"/><path d="M17.5 14.7c2 .7 3.2 2.2 3.6 4.3"/></svg>
+      <span style="font-size: 11px; font-weight: 700;">Team</span>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

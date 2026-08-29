@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap">
+  <style>
+    body { margin: 0; background: #F5F6F4; font-family: "Lato", Helvetica, Arial, sans-serif; color: #1A1A1A; }
+    a { color: #B40066; text-decoration: none; }
+    a:hover { color: #E3027F; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; min-height: 900px; display: flex; background: #F5F6F4;">
+
+  <!-- Sidebar -->
+  <div style="width: 248px; flex-shrink: 0; background: #FFFFFF; border-right: 1px solid #E1E1E1; display: flex; flex-direction: column; gap: 24px; padding: 24px 16px;">
+    <div style="display: flex; align-items: center; gap: 12px; padding: 0 8px 18px 8px; border-bottom: 1px solid #E1E1E1;">
+      <div style="width: 34px; height: 34px; background: #E3027F; position: relative; flex-shrink: 0;">
+        <div style="position: absolute; inset: 8px; border: 2px solid #FFFFFF; border-top-color: transparent; border-radius: 50%;"></div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 1px;">
+        <strong style="font-size: 15px; font-weight: 900; letter-spacing: -0.01em;">MBRT in Balans</strong>
+        <span style="font-size: 12px; color: #5A5A5A;">Linda Jansen · projectgroep</span>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1;">
+      <div style="display: flex; align-items: center; gap: 12px; height: 44px; padding: 0 14px; border-left: 3px solid transparent; font-size: 15px; font-weight: 700;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/></svg>
+        Dashboard
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; height: 44px; padding: 0 14px; border-left: 3px solid transparent; font-size: 15px; font-weight: 700;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+        Micro-pauze
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; height: 44px; padding: 0 14px; border-left: 3px solid transparent; font-size: 15px; font-weight: 700;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2.5-7 4 14 2.5-7h5"/></svg>
+        Beweegchallenge
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; height: 44px; padding: 0 14px; border-left: 3px solid transparent; font-size: 15px; font-weight: 700;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12h17a8.5 8.5 0 0 1-17 0z"/><path d="M12 9c0-2 1.2-3.5 3-3.5"/><path d="M5 19h14"/></svg>
+        Voeding
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; height: 44px; padding: 0 14px; border-left: 3px solid #E3027F; background: #FCE6F2; color: #E3027F; font-size: 15px; font-weight: 900;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3.2"/><path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6S13.9 16 14.5 19"/><path d="M16 6.2a3.2 3.2 0 0 1 0 5.9"/><path d="M17.5 14.7c2 .7 3.2 2.2 3.6 4.3"/></svg>
+        Teamvoortgang
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; height: 44px; padding: 0 14px; border-left: 3px solid transparent; font-size: 15px; font-weight: 700;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4.5h8V8H8z"/><path d="M8 6H5.5v14h13V6H16"/><path d="M9 12h6M9 16h4"/></svg>
+        Evaluatie
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; height: 44px; padding: 0 14px; border-left: 3px solid transparent; font-size: 15px; font-weight: 700;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h10M18 8h2M4 16h4M12 16h8"/><circle cx="16" cy="8" r="2.2"/><circle cx="10" cy="16" r="2.2"/></svg>
+        Beheer
+      </div>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 20px; padding: 32px 40px 40px 40px;">
+
+    <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 24px;">
+      <div style="display: flex; flex-direction: column; gap: 4px;">
+        <span style="font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em; color: #E3027F;">Projectgroep · geanonimiseerd</span>
+        <h1 style="margin: 0; font-size: 34px; font-weight: 900; line-height: 1.1; letter-spacing: -0.02em;">Hoe doet MBRT het samen?</h1>
+        <p style="margin: 0; font-size: 16px; color: #5A5A5A;">Week 3 van 5 · 52 medewerkers uitgenodigd</p>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="height: 44px; padding: 0 18px; border: 2px solid #1A1A1A; display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"/><path d="M7.5 10.5 12 15l4.5-4.5"/><path d="M5 19h14"/></svg>
+          Exporteer CSV
+        </div>
+      </div>
+    </div>
+
+    <!-- Privacy -->
+    <div style="background: #FFFFFF; border: 1px solid #1A1A1A; padding: 14px 18px; display: flex; align-items: center; gap: 12px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 10.5V8a6 6 0 0 1 12 0v2.5"/><path d="M4.5 10.5h15V20h-15z"/></svg>
+      <span style="font-size: 14px; font-weight: 700;">Alleen groepsdata.</span>
+      <span style="font-size: 14px; color: #5A5A5A;">Individuele scores zijn nooit zichtbaar — ook niet voor de teamleider. Cijfers verschijnen pas vanaf 5 deelnemers.</span>
+    </div>
+
+    <!-- KPI's -->
+    <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px;">
+
+      <div style="background: #FFFFFF; border: 1px solid #E1E1E1; padding: 18px; display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 12px; font-weight: 700; color: #5A5A5A;">Actieve deelnemers</span>
+        <strong style="font-size: 34px; font-weight: 900; line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: -0.02em;">34</strong>
+        <span style="font-size: 12px; color: #14795A; font-weight: 700;">+6 t.o.v. week 2</span>
+      </div>
+
+      <div style="background: #FFFFFF; border: 1px solid #E1E1E1; padding: 18px; display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 12px; font-weight: 700; color: #5A5A5A;">Deelname</span>
+        <strong style="font-size: 34px; font-weight: 900; line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: -0.02em;">65%</strong>
+        <span style="font-size: 12px; color: #5A5A5A;">doel 70%</span>
+      </div>
+
+      <div style="background: #FFFFFF; border: 1px solid #E1E1E1; padding: 18px; display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 12px; font-weight: 700; color: #5A5A5A;">Micro-pauzes</span>
+        <strong style="font-size: 34px; font-weight: 900; line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: -0.02em;">132</strong>
+        <span style="font-size: 12px; color: #14795A; font-weight: 700;">deze week</span>
+      </div>
+
+      <div style="background: #FFFFFF; border: 1px solid #E1E1E1; padding: 18px; display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 12px; font-weight: 700; color: #5A5A5A;">Herstelmomenten</span>
+        <strong style="font-size: 34px; font-weight: 900; line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: -0.02em;">59</strong>
+        <span style="font-size: 12px; color: #14795A; font-weight: 700;">deze week</span>
+      </div>
+
+      <div style="background: #FFFFFF; border: 1px solid #E1E1E1; padding: 18px; display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 12px; font-weight: 700; color: #5A5A5A;">Beweegmomenten</span>
+        <strong style="font-size: 34px; font-weight: 900; line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: -0.02em;">85</strong>
+        <span style="font-size: 12px; color: #5A5A5A;">deze week</span>
+      </div>
+
+      <div style="background: #FFFFFF; border: 1px solid #E1E1E1; padding: 18px; display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 12px; font-weight: 700; color: #5A5A5A;">Gezonde keuzes</span>
+        <strong style="font-size: 34px; font-weight: 900; line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: -0.02em;">58</strong>
+        <span style="font-size: 12px; color: #5A5A5A;">aangevinkt</span>
+      </div>
+
+    </div>
+
+    <!-- Trend -->
+    <div style="background: #FFFFFF; border: 1px solid #E1E1E1; padding: 24px; display: flex; flex-direction: column; gap: 20px;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px;">
+        <div style="display: flex; flex-direction: column; gap: 2px;">
+          <h2 style="margin: 0; font-size: 20px; font-weight: 900; letter-spacing: -0.01em;">Energie, stress en herstel per week</h2>
+          <span style="font-size: 14px; color: #5A5A5A;">Gemiddelden op groepsniveau, schaal 1–5</span>
+        </div>
+        <div style="display: flex; gap: 18px;">
+          <div style="display: flex; align-items: center; gap: 7px;"><div style="width: 12px; height: 12px; background: #E3027F;"></div><span style="font-size: 13px; font-weight: 700;">Energie</span></div>
+          <div style="display: flex; align-items: center; gap: 7px;"><div style="width: 12px; height: 12px; background: #E0A40C;"></div><span style="font-size: 13px; font-weight: 700;">Stress</span></div>
+          <div style="display: flex; align-items: center; gap: 7px;"><div style="width: 12px; height: 12px; background: #2EA86A;"></div><span style="font-size: 13px; font-weight: 700;">Herstel</span></div>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 20px;">
+        <div style="display: flex; flex-direction: column; justify-content: space-between; height: 200px; padding-bottom: 26px;">
+          <span style="font-size: 12px; color: #5A5A5A; font-variant-numeric: tabular-nums;">5</span>
+          <span style="font-size: 12px; color: #5A5A5A; font-variant-numeric: tabular-nums;">3</span>
+          <span style="font-size: 12px; color: #5A5A5A; font-variant-numeric: tabular-nums;">1</span>
+        </div>
+
+        <div style="flex-grow: 1; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; border-top: 1px solid #EDEEEB; border-bottom: 1px solid #E1E1E1; padding-top: 0;">
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+            <div style="display: flex; align-items: flex-end; justify-content: center; gap: 8px; height: 174px;">
+              <div style="width: 26px; height: 122px; background: #E3027F;"></div>
+              <div style="width: 26px; height: 133px; background: #E0A40C;"></div>
+              <div style="width: 26px; height: 108px; background: #2EA86A;"></div>
+            </div>
+            <span style="font-size: 13px; font-weight: 700; color: #5A5A5A;">Week 1</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+            <div style="display: flex; align-items: flex-end; justify-content: center; gap: 8px; height: 174px;">
+              <div style="width: 26px; height: 126px; background: #E3027F;"></div>
+              <div style="width: 26px; height: 128px; background: #E0A40C;"></div>
+              <div style="width: 26px; height: 114px; background: #2EA86A;"></div>
+            </div>
+            <span style="font-size: 13px; font-weight: 700; color: #5A5A5A;">Week 2</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+            <div style="display: flex; align-items: flex-end; justify-content: center; gap: 8px; height: 174px;">
+              <div style="width: 26px; height: 131px; background: #E3027F;"></div>
+              <div style="width: 26px; height: 121px; background: #E0A40C;"></div>
+              <div style="width: 26px; height: 122px; background: #2EA86A;"></div>
+            </div>
+            <span style="font-size: 13px; font-weight: 900; color: #1A1A1A;">Week 3</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+            <div style="display: flex; align-items: flex-end; justify-content: center; gap: 8px; height: 174px;">
+              <div style="width: 26px; height: 24px; border: 1px dashed #E1E1E1; border-bottom: 0;"></div>
+              <div style="width: 26px; height: 24px; border: 1px dashed #E1E1E1; border-bottom: 0;"></div>
+              <div style="width: 26px; height: 24px; border: 1px dashed #E1E1E1; border-bottom: 0;"></div>
+            </div>
+            <span style="font-size: 13px; font-weight: 700; color: #B0B0B0;">Week 4</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+            <div style="display: flex; align-items: flex-end; justify-content: center; gap: 8px; height: 174px;">
+              <div style="width: 26px; height: 24px; border: 1px dashed #E1E1E1; border-bottom: 0;"></div>
+              <div style="width: 26px; height: 24px; border: 1px dashed #E1E1E1; border-bottom: 0;"></div>
+              <div style="width: 26px; height: 24px; border: 1px dashed #E1E1E1; border-bottom: 0;"></div>
+            </div>
+            <span style="font-size: 13px; font-weight: 700; color: #B0B0B0;">Week 5</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Toplijsten -->
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
+
+      <div style="background: #FFFFFF; border: 1px solid #E1E1E1; padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+        <h3 style="margin: 0; font-size: 17px; font-weight: 900;">Meest gekozen micro-pauzes</h3>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; font-weight: 700;">20-20-20 oogrust</span><span style="font-size: 14px; font-weight: 900; font-variant-numeric: tabular-nums;">142</span></div>
+            <div style="height: 6px; background: #EDEEEB;"><div style="width: 100%; height: 6px; background: #E3027F;"></div></div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; font-weight: 700;">Nek- en schouderstretch</span><span style="font-size: 14px; font-weight: 900; font-variant-numeric: tabular-nums;">118</span></div>
+            <div style="height: 6px; background: #EDEEEB;"><div style="width: 83%; height: 6px; background: #E3027F;"></div></div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; font-weight: 700;">Rustig ademhalen</span><span style="font-size: 14px; font-weight: 900; font-variant-numeric: tabular-nums;">96</span></div>
+            <div style="height: 6px; background: #EDEEEB;"><div style="width: 68%; height: 6px; background: #E3027F;"></div></div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; font-weight: 700;">Mini-wandeling</span><span style="font-size: 14px; font-weight: 900; font-variant-numeric: tabular-nums;">84</span></div>
+            <div style="height: 6px; background: #EDEEEB;"><div style="width: 59%; height: 6px; background: #E3027F;"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: #FFFFFF; border: 1px solid #E1E1E1; padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+        <h3 style="margin: 0; font-size: 17px; font-weight: 900;">Meest bekeken maaltijden</h3>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; font-weight: 700;">Volkoren wrap met kip</span><span style="font-size: 14px; font-weight: 900; font-variant-numeric: tabular-nums;">73</span></div>
+            <div style="height: 6px; background: #EDEEEB;"><div style="width: 100%; height: 6px; background: #2EA86A;"></div></div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; font-weight: 700;">Couscous-salade</span><span style="font-size: 14px; font-weight: 900; font-variant-numeric: tabular-nums;">58</span></div>
+            <div style="height: 6px; background: #EDEEEB;"><div style="width: 79%; height: 6px; background: #2EA86A;"></div></div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; font-weight: 700;">Linzensoep</span><span style="font-size: 14px; font-weight: 900; font-variant-numeric: tabular-nums;">49</span></div>
+            <div style="height: 6px; background: #EDEEEB;"><div style="width: 67%; height: 6px; background: #2EA86A;"></div></div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; font-weight: 700;">Omelet met spinazie</span><span style="font-size: 14px; font-weight: 900; font-variant-numeric: tabular-nums;">41</span></div>
+            <div style="height: 6px; background: #EDEEEB;"><div style="width: 56%; height: 6px; background: #2EA86A;"></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

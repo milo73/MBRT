@@ -1,2 +1,3 @@
-.vercel
-.playwright-mcp
+# Gegenereerd design-canvas (~2,5 MB payload).
+# Regenereer uit de .dc.html-bronnen + canvas.json met de /design seed-helper.
+mbrt-in-balans-redesign.html

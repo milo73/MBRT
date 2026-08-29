@@ -1,0 +1,27 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html",        "x": 0,    "y": 0,    "w": 1440, "h": 950,  "title": "Dashboard — redesign" },
+    { "file": "Micropauze.dc.html",  "x": 1560, "y": 0,    "w": 390,  "h": 940,  "title": "Micro-pauze (mobiel)" },
+    { "file": "Team.dc.html",        "x": 0,    "y": 1110, "w": 1440, "h": 1040, "title": "Teamvoortgang — geanonimiseerd" },
+    { "file": "Componenten.dc.html", "x": 1560, "y": 1110, "w": 1120, "h": 1120, "title": "Bouwstenen" },
+    { "file": "RichtingB.dc.html",   "x": 0,    "y": 2360, "w": 560,  "h": 780,  "title": "Richting B — Zacht & organisch" },
+    { "file": "RichtingC.dc.html",   "x": 680,  "y": 2360, "w": 560,  "h": 780,  "title": "Richting C — Contrastblok" }
+  ],
+  "annotations": [
+    {
+      "id": "wat-veranderde",
+      "x": 0,
+      "y": -260,
+      "w": 460,
+      "text": "Redesign — crisp, modern, gezond\n\n1. Rustige ondergrond (#F5F6F4) achter witte kaarten: kaarten lezen nu als kaarten.\n2. Getekende lijniconen in plaats van emoji.\n3. Groen (#2EA86A) als vitaliteitssignaal, magenta blijft de actiekleur — een magenta moment per scherm.\n4. Een hoekenregel: overal recht, zoals de Inholland-huisstijl. Geen pillen meer naast blokken.\n5. Cijfers groot en tabellarisch; dunne rails in plaats van dikke balken."
+    },
+    {
+      "id": "richtingen",
+      "x": 0,
+      "y": 2250,
+      "w": 460,
+      "text": "Twee alternatieve richtingen, low-fi. Het dashboard hierboven is richting A (Klinisch fris) — de leidende keuze. Zeg welke je wilt en ik werk die uit."
+    }
+  ],
+  "launch": { "view": "canvas" }
+}
