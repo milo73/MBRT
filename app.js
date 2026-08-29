@@ -184,7 +184,7 @@
     $("#micro-list").innerHTML = list.map(m => {
       const done = state.microPauzes.some(x => x.id === m.id);
       return `<article class="card exercise ${done ? "done" : ""}" data-id="${m.id}">
-        <span class="ex-icon">${m.icon}</span>
+        <span class="ex-icon">${MBRT_ICON(m.icon, 22)}</span>
         <div style="flex:1">
           <h4>${m.title}</h4>
           <small>${m.text}</small>
@@ -260,10 +260,10 @@
     if (!timerItem) return;
     if (timerIsHerstel) {
       state.herstel.push({ id: timerItem.id, at: Date.now() });
-      toast("Herstelmoment voltooid 🌿");
+      toast("Herstelmoment voltooid");
     } else {
       state.microPauzes.push({ id: timerItem.id, at: Date.now(), duration: timerItem.duration, category: timerItem.category });
-      toast("Micro-pauze afgevinkt ⏱️");
+      toast("Micro-pauze afgevinkt");
       maybeUnlockBadges();
     }
     save();
@@ -300,7 +300,7 @@
     $("#badge-grid").innerHTML = D.BADGES.map(b => {
       const unlocked = state.badgesUnlocked.includes(b.id);
       return `<div class="badge ${unlocked ? "" : "locked"}">
-        <span class="badge-icon">${b.icon}</span>
+        <span class="badge-icon">${MBRT_ICON(b.icon, 24)}</span>
         <strong>${b.title}</strong>
         <small>${b.criterion}</small>
       </div>`;
@@ -321,7 +321,7 @@
   function renderHerstel() {
     $("#herstel-list").innerHTML = D.HERSTEL_MOMENTEN.map(h =>
       `<article class="card exercise" data-id="${h.id}">
-        <span class="ex-icon">${h.icon}</span>
+        <span class="ex-icon">${MBRT_ICON(h.icon, 22)}</span>
         <div style="flex:1">
           <h4>${h.title}</h4>
           <small>${h.text}</small>
@@ -374,7 +374,7 @@
     $("#meal-list").innerHTML = list.map(m => {
       const isFav = state.favorites.includes(m.id);
       return `<article class="card meal ${isFav ? "is-fav" : ""}" data-id="${m.id}">
-        <div class="row gap"><h4>${m.title}</h4><span class="fav-star">★</span></div>
+        <div class="row gap"><h4>${m.title}</h4><span class="fav-star">${MBRT_ICON("star", 20)}</span></div>
         <small class="muted">${m.ingredients.slice(0,4).join(", ")}${m.ingredients.length > 4 ? "…" : ""}</small>
         <div class="tags">${m.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
       </article>`;
@@ -390,7 +390,7 @@
   }
   function toggleFavorite(id) {
     const i = state.favorites.indexOf(id);
-    if (i === -1) { state.favorites.push(id); toast("Toegevoegd aan favorieten ★"); }
+    if (i === -1) { state.favorites.push(id); toast("Toegevoegd aan favorieten"); }
     else { state.favorites.splice(i, 1); toast("Uit favorieten gehaald"); }
     save();
     renderVoeding();

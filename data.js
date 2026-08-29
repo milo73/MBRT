@@ -9,28 +9,28 @@ const APP = {
 };
 
 const MICRO_PAUZES = [
-  { id: "mp01", title: "Schouders losmaken", duration: 30,  category: "bewegen",   icon: "🧘", text: "Sta op en draai 30 seconden je schouders rustig rond. Voel de spanning wegtrekken." },
-  { id: "mp02", title: "Nek- en schouderstretch", duration: 60, category: "bewegen", icon: "💪", text: "Leg je oor richting je schouder. 15 sec vasthouden per kant. Herhaal." },
-  { id: "mp03", title: "20-20-20 oogrust", duration: 60, category: "ogen", icon: "👀", text: "Kijk 20 seconden naar iets op 6 meter afstand. Knipper bewust." },
-  { id: "mp04", title: "Rustig ademhalen", duration: 60, category: "ademhaling", icon: "🌬️", text: "Adem 4 sec in, houd 2 sec vast, adem 6 sec uit. Herhaal 6×." },
-  { id: "mp05", title: "Loopje naar de printer", duration: 120, category: "bewegen", icon: "🖨️", text: "Sta op en loop rustig naar de printer of koffieruimte." },
-  { id: "mp06", title: "Traplopen", duration: 120, category: "bewegen", icon: "🪜", text: "Loop één verdieping op en weer terug. Voel je hartslag aantrekken." },
-  { id: "mp07", title: "Staand overleg", duration: 120, category: "houding", icon: "🗣️", text: "Stel voor: deze korte afstemming doen we staand." },
-  { id: "mp08", title: "Mini-wandeling", duration: 180, category: "bewegen", icon: "🚶", text: "Drie minuten door de gang, neem niets mee. Wandelen om te wandelen." },
-  { id: "mp09", title: "Polsen losmaken", duration: 60, category: "bewegen", icon: "🤲", text: "Draai je polsen rond, strek je vingers. Schud je handen los." },
-  { id: "mp10", title: "Bewust water drinken", duration: 60, category: "ontspannen", icon: "💧", text: "Pak je waterfles. Drink rustig, voel het glas, ruik het water." },
-  { id: "mp11", title: "Staand e-mails lezen", duration: 120, category: "houding", icon: "📧", text: "Zet je laptop hoger of pak je telefoon. Werk 2 min staand." },
-  { id: "mp12", title: "Bureau-reset", duration: 180, category: "houding", icon: "🪑", text: "Check houding, scherm op ooghoogte, stoel goed ingesteld, voeten plat op de grond." },
+  { id: "mp01", title: "Schouders losmaken", duration: 30,  category: "bewegen",   icon: "rotate", text: "Sta op en draai 30 seconden je schouders rustig rond. Voel de spanning wegtrekken." },
+  { id: "mp02", title: "Nek- en schouderstretch", duration: 60, category: "bewegen", icon: "person", text: "Leg je oor richting je schouder. 15 sec vasthouden per kant. Herhaal." },
+  { id: "mp03", title: "20-20-20 oogrust", duration: 60, category: "ogen", icon: "eye", text: "Kijk 20 seconden naar iets op 6 meter afstand. Knipper bewust." },
+  { id: "mp04", title: "Rustig ademhalen", duration: 60, category: "ademhaling", icon: "wind", text: "Adem 4 sec in, houd 2 sec vast, adem 6 sec uit. Herhaal 6×." },
+  { id: "mp05", title: "Loopje naar de printer", duration: 120, category: "bewegen", icon: "printer", text: "Sta op en loop rustig naar de printer of koffieruimte." },
+  { id: "mp06", title: "Traplopen", duration: 120, category: "bewegen", icon: "stairs", text: "Loop één verdieping op en weer terug. Voel je hartslag aantrekken." },
+  { id: "mp07", title: "Staand overleg", duration: 120, category: "houding", icon: "chat", text: "Stel voor: deze korte afstemming doen we staand." },
+  { id: "mp08", title: "Mini-wandeling", duration: 180, category: "bewegen", icon: "activity", text: "Drie minuten door de gang, neem niets mee. Wandelen om te wandelen." },
+  { id: "mp09", title: "Polsen losmaken", duration: 60, category: "bewegen", icon: "hand", text: "Draai je polsen rond, strek je vingers. Schud je handen los." },
+  { id: "mp10", title: "Bewust water drinken", duration: 60, category: "ontspannen", icon: "droplet", text: "Pak je waterfles. Drink rustig, voel het glas, ruik het water." },
+  { id: "mp11", title: "Staand e-mails lezen", duration: 120, category: "houding", icon: "mail", text: "Zet je laptop hoger of pak je telefoon. Werk 2 min staand." },
+  { id: "mp12", title: "Bureau-reset", duration: 180, category: "houding", icon: "desk", text: "Check houding, scherm op ooghoogte, stoel goed ingesteld, voeten plat op de grond." },
 ];
 
 const HERSTEL_MOMENTEN = [
-  { id: "h01", title: "Ademhalingsoefening", duration: 120, icon: "🌬️", text: "Twee minuten rustig in- en uitademen. Adem laag in je buik." },
-  { id: "h02", title: "Schermpauze", duration: 180, icon: "👀", text: "Drie minuten weg van het scherm. Kijk uit het raam." },
-  { id: "h03", title: "Nek- en schouderstretch", duration: 120, icon: "💆", text: "Maak rustige rondjes met je schouders. Strek je nek voorzichtig." },
-  { id: "h04", title: "Mini-wandeling", duration: 300, icon: "🚶", text: "Vijf minuten naar buiten of door de gang." },
-  { id: "h05", title: "Stiltemoment", duration: 120, icon: "🤫", text: "Twee minuten niets. Geen scherm, geen gesprek, alleen rust." },
-  { id: "h06", title: "Reset na overleg", duration: 180, icon: "🔄", text: "Drie ademhalingen, even rondkijken, dan pas naar de volgende taak." },
-  { id: "h07", title: "Reflectievraag", duration: 60, icon: "💭", text: "Wat heb je nu nodig om verder te kunnen? Schrijf één woord op." },
+  { id: "h01", title: "Ademhalingsoefening", duration: 120, icon: "wind", text: "Twee minuten rustig in- en uitademen. Adem laag in je buik." },
+  { id: "h02", title: "Schermpauze", duration: 180, icon: "eye", text: "Drie minuten weg van het scherm. Kijk uit het raam." },
+  { id: "h03", title: "Nek- en schouderstretch", duration: 120, icon: "person", text: "Maak rustige rondjes met je schouders. Strek je nek voorzichtig." },
+  { id: "h04", title: "Mini-wandeling", duration: 300, icon: "activity", text: "Vijf minuten naar buiten of door de gang." },
+  { id: "h05", title: "Stiltemoment", duration: 120, icon: "quiet", text: "Twee minuten niets. Geen scherm, geen gesprek, alleen rust." },
+  { id: "h06", title: "Reset na overleg", duration: 180, icon: "rotate", text: "Drie ademhalingen, even rondkijken, dan pas naar de volgende taak." },
+  { id: "h07", title: "Reflectievraag", duration: 60, icon: "question", text: "Wat heb je nu nodig om verder te kunnen? Schrijf één woord op." },
 ];
 
 const MAALTIJDEN = [
@@ -98,11 +98,11 @@ const TIPS = [
 ];
 
 const BADGES = [
-  { id: "b1", title: "Koffierondje-held",     icon: "☕", criterion: "5× loopje gemaakt" },
-  { id: "b2", title: "Wandeloverleg gestart", icon: "🚶", criterion: "1× staand overleg ingebracht" },
-  { id: "b3", title: "Micro-pauze master",    icon: "⏱️", criterion: "15 micro-pauzes in totaal" },
-  { id: "b4", title: "Schermpauze genomen",   icon: "👀", criterion: "5× schermpauze gedaan" },
-  { id: "b5", title: "Bewuste keuze",         icon: "🥗", criterion: "5× gezonde keuze aangevinkt" },
+  { id: "b1", title: "Koffierondje-held",     icon: "cup", criterion: "5× loopje gemaakt" },
+  { id: "b2", title: "Wandeloverleg gestart", icon: "activity", criterion: "1× staand overleg ingebracht" },
+  { id: "b3", title: "Micro-pauze master",    icon: "clock", criterion: "15 micro-pauzes in totaal" },
+  { id: "b4", title: "Schermpauze genomen",   icon: "eye", criterion: "5× schermpauze gedaan" },
+  { id: "b5", title: "Bewuste keuze",         icon: "bowl", criterion: "5× gezonde keuze aangevinkt" },
 ];
 
 const EVALUATION_QUESTIONS = [

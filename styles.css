@@ -179,6 +179,15 @@ button { font-family: inherit; cursor: pointer; }
 .btn-block { width: 100%; }
 .btn:focus-visible { outline: 3px solid var(--c-green-deep); outline-offset: 2px; }
 
+/* -------------------- ICONEN -------------------- */
+.ico { display: block; flex-shrink: 0; }
+.btn .ico, .cheer .ico { margin-right: -2px; }
+.sidebar .nav-item span,
+.cheer,
+.overlay-close { display: flex; align-items: center; }
+.cheer { gap: 8px; }
+.overlay-close { justify-content: center; }
+
 /* -------------------- APP SHELL -------------------- */
 .app { display: grid; grid-template-columns: 248px 1fr; min-height: 100vh; }
 .sidebar {
@@ -227,10 +236,10 @@ button { font-family: inherit; cursor: pointer; }
 
 .stat-card { align-items: flex-start; gap: 6px; }
 .stat-card .stat-icon {
-  font-size: 20px;
   width: 40px; height: 40px;
   border-radius: 50%;
   background: var(--c-green-soft);
+  color: var(--c-green-deep);
   display: flex; align-items: center; justify-content: center;
   margin-bottom: 2px;
 }
@@ -301,10 +310,10 @@ button { font-family: inherit; cursor: pointer; }
 }
 .exercise:hover { box-shadow: 0 6px 20px rgba(60,50,40,.09); border-color: var(--c-line-strong); }
 .exercise .ex-icon {
-  font-size: 22px; line-height: 1;
   width: 44px; height: 44px; flex-shrink: 0;
   border-radius: 50%;
   background: var(--c-green-soft);
+  color: var(--c-green-deep);
   display: flex; align-items: center; justify-content: center;
 }
 .exercise h4 { margin: 0 0 4px; font-size: 15px; font-weight: 900; }
@@ -380,7 +389,7 @@ button { font-family: inherit; cursor: pointer; }
   padding: 16px 12px;
   text-align: center;
 }
-.badge .badge-icon { font-size: 26px; display: block; }
+.badge .badge-icon { display: flex; justify-content: center; color: var(--c-green-deep); }
 .badge strong { display: block; font-size: 13px; font-weight: 900; margin-top: 6px; color: var(--c-text); }
 .badge small { color: var(--c-muted); font-size: 11px; }
 .badge.locked { background: var(--c-fill); border-color: var(--c-line); opacity: .7; }
@@ -416,8 +425,9 @@ button { font-family: inherit; cursor: pointer; }
   background: var(--c-green-soft); color: var(--c-green-deep);
   font-weight: 700;
 }
-.meal .fav-star { margin-left: auto; color: var(--c-line-strong); font-size: 20px; }
+.meal .fav-star { margin-left: auto; color: var(--c-line-strong); display: flex; }
 .meal.is-fav .fav-star { color: var(--c-magenta); }
+.meal.is-fav .fav-star .ico { fill: currentColor; }
 
 .quiz-options { display: flex; flex-direction: column; gap: 8px; }
 .quiz-options button {
@@ -495,7 +505,7 @@ button { font-family: inherit; cursor: pointer; }
   font-family: inherit;
   font-size: 11px; font-weight: 700;
 }
-.bottom-nav .nav-item span { font-size: 20px; line-height: 1; }
+.bottom-nav .nav-item span { display: flex; line-height: 1; }
 .bottom-nav .nav-item.active { color: var(--c-green-deep); }
 
 /* -------------------- TOAST -------------------- */
